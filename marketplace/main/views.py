@@ -1,5 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
+from django.views.generic import CreateView
+
 from .models import *
 # Create your views here.
 
@@ -41,12 +43,16 @@ def show_categories(request, cat_slug):
     return render(request, 'main/index.html', context=context)
 
 
+def login(request):
+    return HttpResponse('login')
 
 
+# def register(request):
+#     return HttpResponse('register')
 
 
-
-
+class RegisterUesr(CreateView):
+    pass
 
 
 

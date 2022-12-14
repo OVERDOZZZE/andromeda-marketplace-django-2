@@ -7,4 +7,7 @@ urlpatterns = [
     path('basket/', basket, name='basket'),
     path('post/<slug:post_slug>/', show_post, name='show_post'),
 
+    path('login/', login, name='login'),
+    path('register/', RegisterUesr.as_view(), name='register')
+
 ]
