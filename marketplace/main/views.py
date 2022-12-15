@@ -35,8 +35,7 @@ def show_post(request, post_slug):
     return render(request, 'main/show_post.html', context=context)
 
 
-def basket(request):
-    return HttpResponse('basket')
+
 
 
 def show_categories(request, cat_slug):
@@ -90,8 +89,8 @@ def logout_user(request):
     return redirect('home')
 
 
-
-
+def basket(request):
+    return render(request, 'main/')
 
 
 
